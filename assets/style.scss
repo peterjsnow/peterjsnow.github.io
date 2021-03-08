@@ -244,7 +244,7 @@ p > img {
 //
 
 .wrapper-masthead {
-  border-top: 8px solid #eee;
+  border-top: 4px solid $lightGrey;
 
   @include mobile {
     border: none;
@@ -301,7 +301,6 @@ p > img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
 
@@ -331,15 +330,16 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGrey;
+  padding: 0 1em;
+  margin: 1em 0;
+  border: 3px solid $darkGrey;
   box-shadow: -4px 6px $mediumGrey;
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
+//.posts > .post:last-child {
+//  padding-bottom: 1em;
+//  border-bottom: none;
+//}
 
 .post {
   blockquote {
@@ -359,10 +359,6 @@ nav {
     font-size: 22px;
     font-style: italic;
     background-color: #ddffb5;;
-  }
-
-  .comments {
-    margin-top: 10px;
   }
 
   .read-more {
