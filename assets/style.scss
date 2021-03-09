@@ -291,7 +291,8 @@ table tr td :last-child {
 }
 
 .site-desc {
-  opacity: 60%
+  opacity: 60%;
+  transition: opacity 0.5s;
 }
 
 .site-desc-name {
@@ -317,6 +318,7 @@ nav {
   font-size: 16px;
   font-weight: 500;
   opacity: 50%;
+  transition: opacity .5s;
 
   @include mobile {
     float: none;
