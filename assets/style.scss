@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   font-kerning: auto;
   margin: 1em 0 15px;
   padding: 0;
-
+  text-transform: inherit;
   @include mobile {
     line-height: 1.2;
   }
@@ -92,15 +92,15 @@ p {
   }
 }
 
-.caps-link {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-}
 
 .share-box {
   font-weight: bold;
   color: $darkGrey;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
 }
 
 a {
@@ -299,6 +299,9 @@ nav {
   float: right;
   font-family: $helveticaNeue;
   font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1;
 
   @include mobile {
     float: none;
@@ -311,9 +314,6 @@ nav {
     margin-left: 20px;
     color: $darkGrey;
     text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
     @include mobile {
       margin: 0 10px;
       color: $blue;
@@ -353,7 +353,10 @@ nav {
   }
 
   .read-more {
-    font-size: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    font-weight: bold;
   }
 }
 
