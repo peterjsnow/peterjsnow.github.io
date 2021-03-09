@@ -85,11 +85,17 @@ h4 {
 p {
   margin-bottom: 1em;
   a {
-    text-decoration: underline;
+    border-bottom: 1px dotted $purple;
     letter-spacing: inherit;
     font-weight: inherit;
     text-transform: inherit;
   }
+}
+
+.caps-link {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 .share-box {
@@ -100,9 +106,6 @@ p {
 a {
   color: $purple;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1;
-  font-weight: bold;
 	cursor: pointer;
   &:hover, &:active {
     color: $blue;
