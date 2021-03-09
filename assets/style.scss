@@ -94,12 +94,13 @@ p {
 
 
 .share-box {
-  font-weight: bold;
+  font-weight: 500;
   color: $darkGrey;
+  font-size: 14px;
   a {
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
   }
 }
 
@@ -248,6 +249,14 @@ table tr td :last-child {
   }
 }
 
+.wrapper-masthead:hover .site-desc {
+  opacity: 100%;
+}
+
+.wrapper-masthead:hover nav {
+  opacity: 100%;
+}
+
 .masthead {
   padding: 20px 0;
 
@@ -272,8 +281,8 @@ table tr td :last-child {
   color: $darkGrey;
   cursor: pointer;
   font-family: $mono;
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   text-align: left;
 
   @include mobile {
@@ -281,7 +290,15 @@ table tr td :last-child {
   }
 }
 
-.site-name-cmt {
+.site-desc {
+  opacity: 60%
+}
+
+.site-desc-name {
+  font-weight: 600;
+}
+
+.site-desc-cmt {
   color: $purple;
 }
 
@@ -300,8 +317,8 @@ nav {
   font-family: $mono;
   font-size: 18px;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 0.1;
+  opacity: 50%;
 
   @include mobile {
     float: none;
@@ -355,8 +372,8 @@ nav {
   .read-more {
     font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.1;
-    font-weight: bold;
+    letter-spacing: 0.08em;
+    font-weight: 500;
   }
 }
 
@@ -519,11 +536,11 @@ Modules - reusable parts of our design
 }
 
 .post-tags {
-  font-size:12px;
+  font-size:14px;
 }
 
 .post-tags a {
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
