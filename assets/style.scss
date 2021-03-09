@@ -382,13 +382,8 @@ footer {
   text-align: center;
 }
 
-.author_title{
-  text-align: center;
-  color: $mediumGrey;
-}
-
 .post_date{
-  text-align: center;
+  font-size: 12px;
   color: $mediumGrey;
 }
 
@@ -523,12 +518,11 @@ Modules - reusable parts of our design
     border-bottom: 1px dotted #000;
 }
 
-.post-tags {
-  margin-bottom: 0.5em
-}
-
 .post-tags a {
-  font-size: 14.5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .pagination a, .pagination span {
