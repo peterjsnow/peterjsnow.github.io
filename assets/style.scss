@@ -39,10 +39,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: $darkerGrey;
   font-weight: bold;
-
+  font-kerning: auto;
   margin: 1em 0 15px;
   padding: 0;
-  text-align: center;
 
   @include mobile {
     line-height: 1.2;
@@ -51,12 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 26px;
+  text-align: center;
   a {
     color: inherit;
   }
 }
 
 h2 {
+  text-align: center;
   font-size: 22px;
 }
 
@@ -83,77 +84,25 @@ h4 {
 
 p {
   margin-bottom: 1em;
-}
-
-table {
-	padding: 0;
-}
-
-table tr {
-	border-top: 1px solid #cccccc;
-	background-color: white;
-	margin: 0;
-	padding: 0;
-}
-
-table tr:nth-child(2n) {
-	background-color: #f8f8f8;
-}
-
-table tr th {
-	font-weight: bold;
-	border: 1px solid #cccccc;
-	text-align: left;
-	margin: 0;
-	padding: 6px 13px;
-}
-
-table tr td {
-	border: 1px solid #cccccc;
-	text-align: left;
-	margin: 0;
-	padding: 6px 13px;
-}
-
-table tr th :first-child,
-table tr td :first-child {
-	margin-top: 0;
-}
-
-table tr th :last-child,
-table tr td :last-child {
-	margin-bottom: 0;
-}
-
-
-.share-box {
-  font-weight: bold;
-  color: #222;
-}
-
-span[data-pullquote] {
-  display: block;
-
-  @include mobile {
-    display: none;
+  a {
+    text-decoration: underline;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
   }
 }
 
-span[data-pullquote]:before {
-  content: attr(data-pullquote);
-  float: right;
-  width: 200px;
-  margin: 0 0 0.5em 30px;
-  padding: 0 -5% 0 0;
-  font-size: 1.3em;
-  font-style: italic;
-  color: green;
-  text-align: center;
+.share-box {
+  font-weight: bold;
+  color: $darkGrey;
 }
 
 a {
   color: $purple;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1;
+  font-weight: bold;
 	cursor: pointer;
   &:hover, &:active {
     color: $blue;
@@ -211,6 +160,46 @@ p > img {
 .date {
   font-style: italic;
   color: $mediumGrey
+}
+
+table {
+	padding: 0;
+}
+
+table tr {
+	border-top: 1px solid #cccccc;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+table tr th {
+	font-weight: bold;
+	border: 1px solid #cccccc;
+	text-align: left;
+	margin: 0;
+	padding: 6px 13px;
+}
+
+table tr td {
+	border: 1px solid #cccccc;
+	text-align: left;
+	margin: 0;
+	padding: 6px 13px;
+}
+
+table tr th :first-child,
+table tr td :first-child {
+	margin-top: 0;
+}
+
+table tr th :last-child,
+table tr td :last-child {
+	margin-bottom: 0;
 }
 
 // Specify the color of the selection
@@ -289,6 +278,10 @@ p > img {
   }
 }
 
+.site-name-cmt {
+  color: $purple;
+}
+
 .site-description {
   margin: -5px 0 0 0;
   color: $mediumGrey;
@@ -336,11 +329,6 @@ nav {
   box-shadow: -4px 6px $mediumGrey;
 }
 
-//.posts > .post:last-child {
-//  padding-bottom: 1em;
-//  border-bottom: none;
-//}
-
 .post {
   blockquote {
     margin: 1.8em .8em;
@@ -362,7 +350,6 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
     font-size: 15px;
   }
 }
@@ -389,42 +376,14 @@ footer {
   text-align: center;
 }
 
-body:after {
-    background: linear-gradient(to right, #ffffff   0, #2196F3   33%, #E91E63   66%, #000 100%);
-    width: 100%;
-    height: 5px;
-    top: 0;
-    position: absolute;
-    left: 0;
-    content: '';
-}
-
-.post h1{
-  font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-align: center;
-  font-weight: bold;
-  font-kerning: auto;
-  font-feature-settings: "kern","liga","dlig","hlig","cswh";
-  line-height: 1.2;
-}
-
-.page h1{
-  font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-align: center;
-  font-weight: bold;
-  font-kerning: auto;
-  font-feature-settings: "kern","liga","dlig","hlig","cswh";
-  line-height: 1.2;
-}
-
 .author_title{
   text-align: center;
-  color: #939aa1;
+  color: $mediumGrey;
 }
 
 .post_date{
   text-align: center;
-  color: #939aa1;
+  color: $mediumGrey;
 }
 
 /* --------------------------------
@@ -559,17 +518,11 @@ Modules - reusable parts of our design
 }
 
 .post-tags {
-  text-align: center;
-  line-height: 35px;
+  margin-bottom: 0.5em
 }
 
 .post-tags a {
   font-size: 14.5px;
-  padding: 2px 13px;
-  border: none;
-  background-color: #4CAF50;
-  border-radius: 50px;
-  color: #fff;
 }
 
 .pagination a, .pagination span {
