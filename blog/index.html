@@ -6,12 +6,9 @@ title: My Blog
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
+      <p class="date">{{ post.date | date: "%B %e, %Y" }}</p>
       <a href="{{ site.baseurl }}{{ post.url }}">
         <h3>{{ post.title }}</h3>
-
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
-        </div>
       </a>
       <div class="entry">
         {{ post.excerpt }}

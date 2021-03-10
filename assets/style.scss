@@ -343,6 +343,10 @@ nav {
 // .main
 //
 
+.latest-posts > .post {
+border-bottom: 1px dashed $darkGrey;
+}
+
 .posts > .post {
   padding: 0 1.5em;
   margin: 1em 0;
