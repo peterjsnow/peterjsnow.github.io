@@ -89,6 +89,9 @@ p {
     letter-spacing: inherit;
     font-weight: inherit;
     text-transform: inherit;
+    &:hover, &:active, &:visited {
+      color: #470091;
+    }
   }
 }
 
@@ -109,11 +112,14 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $purple;
   }
 }
 .heading-link {
   text-decoration: underline;
+  h3 {
+    margin-top: 0;
+  }
 }
 
 ul, ol {
@@ -302,6 +308,7 @@ table tr td :last-child {
 
 .site-desc-name {
   font-weight: 600;
+  text-transform: lowercase;
 }
 
 .site-desc-cmt {
@@ -356,11 +363,11 @@ nav {
 
 .posts > .post {
   border-bottom: 3px dashed $lightGrey;
-  margin-bottom: 1em
+  padding: 1em 0;
 }
 
 .posts > .post:last-child {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
   border-bottom: none;
 }
 
@@ -389,10 +396,6 @@ nav {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 500;
-  }
-
-  a {
-    
   }
 }
 
