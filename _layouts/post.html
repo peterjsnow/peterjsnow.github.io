@@ -6,22 +6,20 @@ layout: default
 
 
   <h1>{{ page.title }}</h1>
-
-  <div>
-    <div class="post-tags">
-      <p>
-        {% if post %}
-          {% assign categories = post.categories %}
-        {% else %}
-          {% assign categories = page.categories %}
-        {% endif %}
-        {% for category in categories %}
-          <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
-          {% unless forloop.last %}&nbsp;{% endunless %}
-        {% endfor %}
-      </p>
-    </div>
+  <div class="post-tags">
+    <p>
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+      {% for category in categories %}
+        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+        {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+    </p>
   </div>
+  
     
   <div class="entry">
     {{ content }}
@@ -32,7 +30,7 @@ layout: default
   </div>
 
 <div class="date">
-  <p>Published {{ page.date | date: "%B %e, %Y" }} · {{site.author}} </p>
+  <p>Published {{ page.date | date: "%B %e, %Y" }} · By {{site.author}} · <a class="text-link" href="mailto:{{ site.footer-links.email }}">Contact</a></p>
   {% if page.last_modified_at %}
   <p datetime="{{ page.last_modified_at | date_to_xmlschema }}">Last updated: {{ page.last_modified_at | date: "%b %-d, %Y" }}</p>
   {% endif %}
