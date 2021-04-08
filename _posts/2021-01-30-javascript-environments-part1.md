@@ -4,9 +4,13 @@ title: Javascript Environments part 1 - Execution Context and Environment Record
 categories: [Javascript]
 ---
 
-Have you ever wondered how Javascript engines implement scope? Where bindings live? Or how closures really work? At the bottom of these questions are **environments**. In my experience, gaining an understanding of environments gives much needed clarity to several important concepts, especially scope and closures. There are challenges however - since Javascript is a continually evolving language it's not always clear whether a learning resource might be referring to outdated mechanisms. Consulting the ECMAScript specification documents themselves can be also confusing, as much of the behind the scenes behaviour results from the need to ensure backward compatibility, and makes no sense without a knowledge of the history of the language. In this series, I attempt to give an up to date explanation of environments, highlighting the most important concepts, and pointing out the legacy bits.
+Have you ever wondered how Javascript engines implement scope? Where bindings live? Or how closures really work? At the bottom of these questions are **environments**. In my experience, gaining an understanding of environments gives much needed clarity to several important concepts, especially scope and closures. 
 
-In this first part, we'll introduce the basic concepts along with some examples, without going too deeply into specifics.
+This journey presents challenges however - since Javascript is a continually evolving language it's not always clear whether a learning resource might be referring to outdated mechanisms. Consulting the ECMAScript specification documents themselves can be also confusing, as much of the behind the scenes behaviour results from the need to ensure backward compatibility, and makes no sense without a knowledge of the history of the language. 
+
+In this series, I attempt to give an up to date explanation of environments, highlighting the most important concepts, and pointing out the legacy bits. In the first part, we'll introduce the basic concepts along with some examples, without going too deeply into specifics.
+
+### Definitions
 
 First, let's make sure we're all on the same page. When we talk about "scope" we are referring to the mechanism by which Javascript determines which variables are defined at a particular part of the program.
 
@@ -81,7 +85,14 @@ We're now going to focus in on one important kind of property that each executio
 
 ### Environment Records
 
-Associated with each execution context are **environment records**. These hold data and specify methods which allow javascript to manage the state of the current context. Each environment record contains a mapping of all the bindings that are present within the scope of that particular environment, and a reference to an outer environment record. This outer reference implements the nested scope of Javascript, allowing identifiers to be resolved by traversing environments outwards from an inner environment.
+Associated with each execution context are **environment records**. These hold data and specify methods which allow javascript to manage the state of the current context. 
+
+Each environment record contains at least the following:
+- A mapping of all the bindings that are present within the scope of that particular environment.
+- A reference to an outer environment record. 
+- Methods used for managing state - including those for creating, initializing, and reassigning bindings
+
+The reference to an outer environment is what implements the nested scope of Javascript, allowing identifiers to be resolved by traversing environments outwards from an inner environment.
 
 When code is executed that would create a new scope, such as a function or block, before the body of code is executed new environment records are created and linked to the relevant execution context. The identifiers that are in scope within the environment that is to be executed are added to these records, and possibly initialized depending on the type of declaration. This implements the behaviour of **hoisting** which you may be familiar with.
 
