@@ -2,19 +2,49 @@
 layout: post
 title: Statements & Expressions
 categories: [Tutorials,Javascript]
+published: false
 ---
 
 This article is part of a series that takes some concept and . It is not meant to be an exhaustive or accurate, but rather useful.
 It is assumes a knowledge of language basics, 
 
 
-As you began your journey into Javascript, you were probably introduced to the concepts of 'statements and expressions'. You may have been shown an analogy, relating statements to sentences and expressions to phrases.
+## Values
+What are values?
+
+What are primitive types - 
+
+In javascript, primitive values are 'wrapped' with helper objects. 
+When you call a method on a primitive value, Javascript automatically converts that value into the object of its type, and thus is able to access the prototype methods.
+
+```javascript
+"abcd".length;
+// returns 4
+```
+
+
+
+### Immutability
+
+Primitive values are immutable. They cannot be changed. I like to think of primitive values as concrete entities that already exist. For example, values of the Number type could be represented as a deck of cards, with each card having an integer written on it. If you have the card with "42" written on it, the only way to get "43" is to pick up a new card - you can't change "42" into "43".
+
+Another aspect of the immutability of primitive values is that you cannot modify or add to their properties:
+```javascript
+"abcd".length = 0; // Gives an error in strict mode, otherwise silently fails
+"abcd".length;
+// returns 4
+```
+
+Object values (such as Arrays, Functions and Objects) are mutable. 
 
 ## Expressions
-We can think of expressions as any units of code that resolves to a value. What does 'resolving to a value' mean? 
 
-Let's hope into a browser console for a minute.
-Where there is an expression, you can think of the javascript interpreter replacing the expression with the value it resolves to.
+We can think of expressions as any units of code that resolves or evaluates to a value. Wherever there is an expression, you can think of Javascript as evaluating it to a value, and replacing the expression with that value at that point in the code.
+
+
+Values are expressions.
+
+Pay attention to where JS expects expressions. eg in for loop
 
 x++ vs ++x
 
@@ -51,10 +81,16 @@ myArray.map([key, val]) => { key : value };
 ```
 To fix it, we can use the expression grouping operator to force the interpreter to see the body as an expression:
 
+```
+if (expression) statement;
+for (statement; expression; expression)
+```
 
 ### Summary
 
 ### Going further
+
+##
 
 
 Functions vs IIFE
