@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Javascript Environments part 1 - Execution Context and Environment Records
+title: Javascript Environments 1 - Execution Context and Environment Records
 categories: [Javascript]
 ---
 
-Have you ever wondered how Javascript engines implement scope? Where bindings live? Or how closures really work? At the bottom of these questions are **environments**. In my experience, gaining an understanding of environments gives much needed clarity to several important concepts, especially scope and closures. 
+Have you ever wondered how Javascript engines implement scope? Where bindings live? Or how closures really work? At the bottom of these questions are **environments**. In my experience, gaining an understanding of environments gives much needed clarity to several important concepts, especially scope and closures. It becomes apparent  'odd' behaviour of Javascript that causes frustration becomes apparent 
 
 This journey presents challenges however - since Javascript is a continually evolving language it's not always clear whether a learning resource might be referring to outdated mechanisms. Consulting the ECMAScript specification documents themselves can be also confusing, as much of the behind the scenes behaviour results from the need to ensure backward compatibility, and makes no sense without a knowledge of the history of the language. 
 

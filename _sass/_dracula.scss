@@ -1,9 +1,10 @@
 .highlight {
     background-color: #1e1c3f;
-    padding: 7px 7px 7px 10px;
+    padding: 0.8em 1em;
     overflow: auto;
     font-size: 95%;
-    color: #f8f8f2
+    color: #f8f8f2;
+    border-radius: 10px;
 }
 
 code {
@@ -19,6 +20,8 @@ code {
 
 div.highlighter-rouge {
     margin-bottom: 1em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
 }
 
 .highlight .hll { background-color: #f1fa8c }

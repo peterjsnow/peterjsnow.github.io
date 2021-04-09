@@ -15,4 +15,4 @@ Currently, I'm a student at [Launch School](https://www.launchschool.com), where
 
 One of my aspirations is to help others learn to code. I like to write [tutorials and articles](/blog) to encourage new developers with tips, techniques, and concepts that have been helpful to me on my journey.
 
-<!-- {% include posts.html %} -->
+{% include posts.html %}

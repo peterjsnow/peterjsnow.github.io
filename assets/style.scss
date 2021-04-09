@@ -124,7 +124,11 @@ a {
 
 ul, ol {
   margin-bottom: 1em;
-  padding-left: 1.1em;
+  padding: 1.3em 2.5em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  background: $lightPurple;
+  border-radius: 10px;
 }
 
 ul {
@@ -137,6 +141,8 @@ ol {
 
 ol ul, ul ol, ul ul, ol ol {
   margin: 0;
+  padding: 0;
+  padding-left: 1.1em;
 }
 
 ul ul, ol ul {
@@ -145,6 +151,10 @@ ul ul, ol ul {
 
 li::marker {
   color: $purple;
+}
+
+li {
+  margin-bottom: 0.5em;
 }
 
 em, i {
