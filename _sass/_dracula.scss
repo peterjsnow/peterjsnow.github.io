@@ -13,15 +13,22 @@ code {
 }
 
 .highlighter-rouge { 
-    background-color: #FAFAFA; 
-    color: #FF554A; 
-    font-size: 16px;
+    background-color: #1e1c3f; 
+    font-size: 0.8rem;
 }
 
 div.highlighter-rouge {
-    margin-bottom: 1em;
-    margin-left: -1.5em;
-    margin-right: -1.5em;
+    margin-bottom: 1rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    
+}
+
+code.highlighter-rouge {
+    background-color: #eee;
+    padding: 0.1rem;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
 .highlight .hll { background-color: #f1fa8c }
