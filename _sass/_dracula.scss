@@ -13,7 +13,7 @@ code {
 }
 
 .highlighter-rouge { 
-    background-color: #1e1c3f; 
+    color: #1e1c3f; 
     font-size: 0.8rem;
 }
 
@@ -22,6 +22,10 @@ div.highlighter-rouge {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
     
+    @include mobile {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 code.highlighter-rouge {
