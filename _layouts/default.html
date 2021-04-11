@@ -19,27 +19,25 @@
   <body>
     <div class="wrapper-container">
       <div class="wrapper-masthead">
-        <div class="container">
-          <header class="masthead clearfix">
-            <div class="site-info">
-              <h1 class="site-name">
-                <a href="{{ site.baseurl }}/">
-                  <span class="site-desc">(</span> 
-                  <span class="site-desc-name">{{ site.name }}</span> 
-                  <span class="site-desc">) 
-                    <span class="site-desc-cmt">=></span> { dev }
-                  </span>
-                </a>
-              </h1>
-            </div>
+        <header class="masthead clearfix">
+          <div class="site-info">
+          <h1 class="site-name">
+              <a href="{{ site.baseurl }}/">
+                <span class="site-desc">(</span> 
+                <span class="site-desc-name">{{ site.name }}</span> 
+                <span class="site-desc">) 
+                  <span class="site-desc-cmt">=></span> { dev }
+                </span>
+              </a>
+            </h1>
+          </div>
 
-            <nav>
-              <a href="{{ site.baseurl }}/">Home</a>
-              <a href="https://github.com/{{ site.footer-links.github }}" target="_blank">Projects</a>
-              <a href="{{ site.baseurl }}/blog">Blog</a>
-            </nav>
-          </header>
-        </div>
+          <nav>
+            <a href="{{ site.baseurl }}/">Home</a>
+            <a href="https://github.com/{{ site.footer-links.github }}" target="_blank">Projects</a>
+            <a href="{{ site.baseurl }}/blog">Blog</a>
+          </nav>
+        </header>
       </div>
 
       <div class="wrapper-main">
